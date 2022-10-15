@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab - youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Snowfall Predction WebApp</title>
+    <link rel="stylesheet" href="static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<!-- prem is good boy -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Snowfall Predction</div>
+        <div class="content">
+            <form method="post" action="{{url_for('home1')}}">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Precipitation</span>
+                        <input type="text" name="a" placeholder="Enter Precipitation in MM" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Temprature</span>
+                        <input type="text" name="b" placeholder="Enter  Temprature" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Year</span>
+                        <input type="text" name="c" placeholder="Enter Year" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Month</span>
+                        <input type="text" name="d" placeholder="Enter Month" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Date</span>
+                        <input type="text" name="e" placeholder="Enter Date" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Elevation</span>
+                        <input type="text" name="f" placeholder="Enter Elevation" required>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Predict">
+                </div>
+            </form>
+        </div>
+        <div class="predict">
+            <p id="result">Result :-{{prediction_text}}</p>
+        </div>
+    </div>
+
+    <!-- <div class="predict">
+    <p id="result">Result :-{{prediction_text}}</p>
+  </div> -->
+</body>
+
+</html>
